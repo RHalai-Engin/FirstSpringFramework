@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="guest" class="co.pragra.learning.firstspringframework.Guest" >
+        <property name="firstName" value="Thomas"></property>
+        <property name="lastName" value="Shelby"></property>
+        <property name="email" value="Thomas@example.com"></property>
+        <property name="phoneNumber">
+        <list>
+            <value>Home: 416-897-5418</value>
+            <value>Work: 555-555-9999</value>
+        </list>
+        </property>
+        <property name="address">
+            <map>
+                <entry key="Home Address" value="Brampton"></entry>
+                <entry key="Work Address" value="Scarborough"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="guest1" class="co.pragra.learning.firstspringframework.Guest" >
+        <property name="firstName" value="Tom"></property>
+        <property name="lastName" value="Cruise"></property>
+        <property name="email" value="TomC@example.com"></property>
+        <property name="phoneNumber">
+                <list>
+                    <value>Home: 448-897-5418</value>
+                    <value>Work: 555-555-9999</value>
+                </list>
+            </property>
+        <property name="address">
+            <map>
+                <entry key="Home Address" value="Etobicoke"></entry>
+                <entry key="Work Address" value="Toronto"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="guest2" class="co.pragra.learning.firstspringframework.Guest" >
+        <property name="firstName" value="Brad" ></property>
+        <property name="lastName" value="Cooper"></property>
+        <property name="email" value="Cooper@example.com"></property>
+        <property name="phoneNumber">
+            <list>
+                <value>Home: 416-856-5418</value>
+                <value>Work: 666-555-4444</value>
+            </list>
+        </property>
+        <property name="address">
+            <map>
+                <entry key="Home Address" value="Oakdale"></entry>
+                <entry key="Work Address" value="Kitchner"></entry>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="address" class="co.pragra.learning.firstspringframework.Address">
+        <constructor-arg name="city" value="Etobicoke"></constructor-arg>
+        <constructor-arg name="postalCode" value="D5T 8T2"></constructor-arg>
+    </bean>
+
+    <bean id="address1" class="co.pragra.learning.firstspringframework.Address">
+        <constructor-arg name="city" value="Brampton"></constructor-arg>
+        <constructor-arg name="postalCode" value="D9T 7W2"></constructor-arg>
+    </bean>
+
+    <bean id="address2" class="co.pragra.learning.firstspringframework.Address">
+        <constructor-arg name="city" value="Scarborough"></constructor-arg>
+        <constructor-arg name="postalCode" value="29Y 8E2"></constructor-arg>
+    </bean>
+
+</beans>
+
