@@ -20,4 +20,12 @@ public class Guest {
     //private Address address;
     private String phoneNumber;
     private String address;
+    //After Method - This method is executed right after object/bean creation
+    public void initializing(){
+        System.out.println("Initializing..");
+    }
+    //Before method - This method is executed right before garbage collection/object deletion
+    public void safeDelete(){
+        System.out.println("Safely destroying");
+    }
 }

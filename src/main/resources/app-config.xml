@@ -3,11 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="guest" class="co.pragra.learning.firstspringframework.Guest" >
+    <bean id="guest" class="co.pragra.learning.firstspringframework.Guest" init-method="initializing" destroy-method="safeDelete">
         <property name="firstName" value="Thomas"></property>
         <property name="lastName" value="Shelby"></property>
         <property name="email" value="Thomas@example.com"></property>
-        <property name="phoneNumber">
+        <property name="phoneNumber" value="456-789-1548"></property>
+        <property name="address" value="123 Blvd"></property>
+        <!--<property name="phoneNumber">
         <list>
             <value>Home: 416-897-5418</value>
             <value>Work: 555-555-9999</value>
@@ -18,14 +20,16 @@
                 <entry key="Home Address" value="Brampton"></entry>
                 <entry key="Work Address" value="Scarborough"></entry>
             </map>
-        </property>
+        </property>-->
     </bean>
 
     <bean id="guest1" class="co.pragra.learning.firstspringframework.Guest" >
         <property name="firstName" value="Tom"></property>
         <property name="lastName" value="Cruise"></property>
         <property name="email" value="TomC@example.com"></property>
-        <property name="phoneNumber">
+        <property name="phoneNumber" value="456-789-1548"></property>
+        <property name="address" value="123 Blvd"></property>
+        <!--<property name="phoneNumber">
                 <list>
                     <value>Home: 448-897-5418</value>
                     <value>Work: 555-555-9999</value>
@@ -36,14 +40,16 @@
                 <entry key="Home Address" value="Etobicoke"></entry>
                 <entry key="Work Address" value="Toronto"></entry>
             </map>
-        </property>
+        </property>-->
     </bean>
 
     <bean id="guest2" class="co.pragra.learning.firstspringframework.Guest" >
         <property name="firstName" value="Brad" ></property>
         <property name="lastName" value="Cooper"></property>
         <property name="email" value="Cooper@example.com"></property>
-        <property name="phoneNumber">
+        <property name="phoneNumber" value="456-789-1548"></property>
+        <property name="address" value="123 Blvd"></property>
+        <!--<property name="phoneNumber">
             <list>
                 <value>Home: 416-856-5418</value>
                 <value>Work: 666-555-4444</value>
@@ -54,7 +60,7 @@
                 <entry key="Home Address" value="Oakdale"></entry>
                 <entry key="Work Address" value="Kitchner"></entry>
             </map>
-        </property>
+        </property>-->
     </bean>
 
     <bean id="address" class="co.pragra.learning.firstspringframework.Address">
