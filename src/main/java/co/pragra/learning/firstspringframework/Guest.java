@@ -4,13 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-@AllArgsConstructor
+//@AllArgsConstructor
 @Data
 @ToString
+@Component
 public class Guest {
     private String firstName;
     private String lastName;
